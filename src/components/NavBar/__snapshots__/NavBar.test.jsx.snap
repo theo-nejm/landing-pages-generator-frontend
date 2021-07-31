@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar /> should match snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  background: #fff;
+}
+
+.c1 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+  color: #0a1128;
+  position: relative;
+}
+
+.c1::after {
+  content: '';
+  position: absolute;
+  bottom: 0.75rem;
+  left: 25%;
+  height: 1px;
+  width: 50%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  height: 0.2rem;
+  background: #dc143c;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.c1:hover::after {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+@media screen and (max-width:768px) {
+  .c0 {
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <a
+      class="c1"
+      href="#target-1"
+      target="_blank"
+    >
+      Link 1
+    </a>
+    <a
+      class="c1"
+      href="#target-2"
+      target="_blank"
+    >
+      Link 2
+    </a>
+    <a
+      class="c1"
+      href="#target-3"
+      target="_self"
+    >
+      Link 3
+    </a>
+    <a
+      class="c1"
+      href="#target-4"
+      target="_blank"
+    >
+      Link 4
+    </a>
+    <a
+      class="c1"
+      href="#target-5"
+      target="_self"
+    >
+      Link 5
+    </a>
+  </nav>
+</div>
+`;

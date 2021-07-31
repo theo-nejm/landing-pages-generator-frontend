@@ -6,8 +6,8 @@ import { theme } from '../../styles/theme';
 
 describe('<Heading />', () => {
   it('should render with default values', () => {
-    renderTheme(<Heading>Text</Heading>);
-    const heading = screen.getByRole('heading', { name: 'Text' });
+    renderTheme(<Heading>texto</Heading>);
+    const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
       color: theme.colors.primaryColor,
@@ -17,8 +17,8 @@ describe('<Heading />', () => {
   });
 
   it('should render with white color', () => {
-    renderTheme(<Heading colorDark={false}>Text</Heading>);
-    const heading = screen.getByRole('heading', { name: 'Text' });
+    renderTheme(<Heading colorDark={false}>texto</Heading>);
+    const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
       color: '#FFF',
@@ -26,8 +26,8 @@ describe('<Heading />', () => {
   });
 
   it('should render correct heading sizes', () => {
-    const { rerender } = renderTheme(<Heading size="small">Text</Heading>);
-    const heading = screen.getByRole('heading', { name: 'Text' });
+    const { rerender } = renderTheme(<Heading size="small">texto</Heading>);
+    const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
       'font-size': theme.fonts.sizes.small,
@@ -35,37 +35,92 @@ describe('<Heading />', () => {
 
     rerender(
       <ThemeProvider theme={theme}>
-        <Heading size="large">Text</Heading>
+        <Heading size="xlarge">texto</Heading>
       </ThemeProvider>,
     );
-    const headingBig = screen.getByRole('heading', { name: 'Text' });
-    expect(headingBig).toHaveStyle({
+
+    expect(screen.getByRole('heading', { name: 'texto' })).toHaveStyle({
+      'font-size': theme.fonts.sizes.xlarge,
+    });
+
+    rerender(
+      <ThemeProvider theme={theme}>
+        <Heading size="large">texto</Heading>
+      </ThemeProvider>,
+    );
+
+    expect(screen.getByRole('heading', { name: 'texto' })).toHaveStyle({
       'font-size': theme.fonts.sizes.large,
     });
 
     rerender(
       <ThemeProvider theme={theme}>
-        <Heading size="medium">Text</Heading>
+        <Heading size="xhuge">texto</Heading>
       </ThemeProvider>,
     );
-    const headingMedium = screen.getByRole('heading', { name: 'Text' });
-    expect(headingMedium).toHaveStyle({
+
+    expect(screen.getByRole('heading', { name: 'texto' })).toHaveStyle({
+      'font-size': theme.fonts.sizes.xhuge,
+    });
+
+    rerender(
+      <ThemeProvider theme={theme}>
+        <Heading size="xsmall">texto</Heading>
+      </ThemeProvider>,
+    );
+
+    expect(screen.getByRole('heading', { name: 'texto' })).toHaveStyle({
+      'font-size': theme.fonts.sizes.xsmall,
+    });
+
+    rerender(
+      <ThemeProvider theme={theme}>
+        <Heading size="medium">texto</Heading>
+      </ThemeProvider>,
+    );
+
+    expect(screen.getByRole('heading', { name: 'texto' })).toHaveStyle({
       'font-size': theme.fonts.sizes.medium,
+    });
+
+    rerender(
+      <ThemeProvider theme={theme}>
+        <Heading size="xxlarge">texto</Heading>
+      </ThemeProvider>,
+    );
+
+    expect(screen.getByRole('heading', { name: 'texto' })).toHaveStyle({
+      'font-size': theme.fonts.sizes.xxlarge,
     });
   });
 
+  it('should render correct font-size when using mobile', () => {
+    renderTheme(<Heading size="huge">texto</Heading>);
+    screen.getByRole('heading', { name: 'texto' });
+
+    expect(screen.getByRole('heading', { name: 'texto' })).toHaveStyleRule(
+      'font-size',
+      theme.fonts.sizes.large,
+      {
+        media: theme.media.medium,
+      },
+    );
+  });
+
   it('should render with uppercase letters', () => {
-    renderTheme(<Heading upperCase>Text</Heading>);
-    const heading = screen.getByRole('heading', { name: 'Text' });
+    renderTheme(<Heading upperCase={true}>texto</Heading>);
+    const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
       'text-transform': 'uppercase',
     });
   });
 
-  it('should render with as h6', () => {
-    const { container } = renderTheme(<Heading as="h6">Text</Heading>);
+  it('should render correct heading element', () => {
+    const { container } = renderTheme(<Heading as="h6">texto</Heading>);
+    screen.getByRole('heading', { name: 'texto' });
     const h6 = container.querySelector('h6');
+
     expect(h6.tagName.toLowerCase()).toBe('h6');
   });
 });

@@ -1,7 +1,9 @@
+import { Heading } from '../../components/Heading';
+
 export default function Home() {
   return (
-    <div className="App">
-      <h1>Hello, world!</h1>
+    <div className="Home">
+      <Heading>Hello, world!</Heading>
     </div>
   );
 }

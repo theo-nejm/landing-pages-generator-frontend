@@ -1,0 +1,475 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Menu /> should match snapshot 1`] = `
+.c1 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c4 {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+}
+
+.c2 {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  height: 7rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.c2 > .c3 {
+  padding-top: 0;
+  padding-botom: 0;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 7rem;
+}
+
+.c0 {
+  z-index: 6;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #0a1128;
+  display: none;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.c7 > img {
+  height: 2.4rem;
+}
+
+.c6 {
+  color: #0a1128;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.c9 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+  color: #0a1128;
+  position: relative;
+}
+
+.c9::after {
+  content: '';
+  position: absolute;
+  bottom: 0.75rem;
+  left: 25%;
+  height: 1px;
+  width: 50%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  height: 0.2rem;
+  background: #dc143c;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.c9:hover::after {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+@media screen and (max-width:768px) {
+  .c2 {
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .c5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    text-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .c5 img,
+  .c5 h1 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .c8 {
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+<div>
+  <button
+    aria-label="Open/Close menu"
+    class="c0"
+  >
+    <svg
+      aria-hidden="true"
+      aria-label="Open menu"
+      class="c1"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 0h24v24H0V0z"
+        fill="none"
+      />
+      <path
+        d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+      />
+    </svg>
+  </button>
+  <div
+    class="c2"
+  >
+    <div
+      class="c3 c4"
+    >
+      <div
+        class="c5"
+      >
+        <h1
+          class="c6"
+        >
+          <a
+            class="c7"
+            href="#target"
+          >
+            Logo
+          </a>
+        </h1>
+        <nav
+          aria-label="Main menu"
+          class="c8"
+        >
+          <a
+            class="c9"
+            href="#target-1"
+            target="_self"
+          >
+            Link 1
+          </a>
+          <a
+            class="c9"
+            href="#target-2"
+            target="_self"
+          >
+            Link 2
+          </a>
+          <a
+            class="c9"
+            href="#target-3"
+            target="_self"
+          >
+            Link 3
+          </a>
+          <a
+            class="c9"
+            href="#target-4"
+            target="_self"
+          >
+            Link 4
+          </a>
+          <a
+            class="c9"
+            href="#target-5"
+            target="_self"
+          >
+            Link 5
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Menu /> should not render links when no links were passed as props 1`] = `
+.c1 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c4 {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+}
+
+.c2 {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  height: 7rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.c2 > .c3 {
+  padding-top: 0;
+  padding-botom: 0;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 7rem;
+}
+
+.c0 {
+  z-index: 6;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #0a1128;
+  display: none;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.c7 > img {
+  height: 2.4rem;
+}
+
+.c6 {
+  color: #0a1128;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+@media screen and (max-width:768px) {
+  .c2 {
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .c5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    text-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .c5 img,
+  .c5 h1 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .c8 {
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+<div>
+  <button
+    aria-label="Open/Close menu"
+    class="c0"
+  >
+    <svg
+      aria-hidden="true"
+      aria-label="Open menu"
+      class="c1"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 0h24v24H0V0z"
+        fill="none"
+      />
+      <path
+        d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+      />
+    </svg>
+  </button>
+  <div
+    class="c2"
+  >
+    <div
+      class="c3 c4"
+    >
+      <div
+        class="c5"
+      >
+        <h1
+          class="c6"
+        >
+          <a
+            class="c7"
+            href="#target"
+          >
+            Logo
+          </a>
+        </h1>
+        <nav
+          aria-label="Main menu"
+          class="c8"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -9,7 +9,6 @@ exports[`<NavBar /> should match snapshot 1`] = `
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  background: #fff;
 }
 
 .c1 {
@@ -58,19 +57,20 @@ exports[`<NavBar /> should match snapshot 1`] = `
 
 <div>
   <nav
+    aria-label="Main menu"
     class="c0"
   >
     <a
       class="c1"
       href="#target-1"
-      target="_blank"
+      target="_self"
     >
       Link 1
     </a>
     <a
       class="c1"
       href="#target-2"
-      target="_blank"
+      target="_self"
     >
       Link 2
     </a>
@@ -84,7 +84,7 @@ exports[`<NavBar /> should match snapshot 1`] = `
     <a
       class="c1"
       href="#target-4"
-      target="_blank"
+      target="_self"
     >
       Link 4
     </a>

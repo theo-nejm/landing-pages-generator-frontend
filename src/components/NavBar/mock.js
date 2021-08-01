@@ -2,12 +2,12 @@ export default [
   {
     children: 'Link 1',
     link: '#target-1',
-    newTab: true,
+    newTab: false,
   },
   {
     children: 'Link 2',
     link: '#target-2',
-    newTab: true,
+    newTab: false,
   },
   {
     children: 'Link 3',
@@ -17,7 +17,7 @@ export default [
   {
     children: 'Link 4',
     link: '#target-4',
-    newTab: true,
+    newTab: false,
   },
   {
     children: 'Link 5',

@@ -85,11 +85,11 @@ exports[`<GridTwoColumns /> should render <GridTwoColumns /> 1`] = `
         <div
           class="c3"
         >
-          <h1
+          <h2
             class="c4 c5"
           >
             Título da seção
-          </h1>
+          </h2>
           <p
             class="c6"
           >

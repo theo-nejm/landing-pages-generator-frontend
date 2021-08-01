@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should render <Footer /> 1`] = `
+.c1 {
+  font-size: 2.4rem;
+}
+
+.c0 p,
+.c0 a {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+<div>
+  <footer
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      Hello, world!
+    </p>
+  </footer>
+</div>
+`;

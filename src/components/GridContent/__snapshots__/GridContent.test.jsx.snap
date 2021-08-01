@@ -56,11 +56,11 @@ exports[`<GridContent /> should render <GridContent /> 1`] = `
       <div
         class="c2"
       >
-        <h1
+        <h2
           class="c3"
         >
           Grid Content Section
-        </h1>
+        </h2>
         <div
           class="c4"
         >

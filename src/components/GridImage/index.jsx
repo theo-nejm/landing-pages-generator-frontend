@@ -8,7 +8,7 @@ export const GridImage = ({ background = false, title, description, grid }) => {
   return (
     <SectionBackground background={background}>
       <Container>
-        <Heading colorDark={!background} as="h2">
+        <Heading colorDark={!background} as="h2" upperCase>
           {title}
         </Heading>
         <TextComponent>{description}</TextComponent>

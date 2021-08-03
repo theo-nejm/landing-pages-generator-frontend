@@ -13,7 +13,7 @@ export const Container = styled.a`
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    z-index: 6;
+    z-index: 4;
     opacity: 0.85;
   `}
 `;

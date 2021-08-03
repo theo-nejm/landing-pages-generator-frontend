@@ -3,8 +3,10 @@ import styled, { css } from 'styled-components';
 export const Container = styled.footer`
   ${({ theme }) => css`
     p,
-    a {
-      font-size: ${theme.fonts.sizes.small};
+    a,
+    i,
+    b {
+      font-size: ${theme.fonts.sizes.xxsmall};
       text-align: center;
     }
   `}

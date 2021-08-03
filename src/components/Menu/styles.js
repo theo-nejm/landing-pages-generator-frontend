@@ -17,6 +17,7 @@ export const Container = styled.div`
     transition: all .2s ease-in-out;
     height: 7rem;
     border-bottom: 1px solid ${theme.colors.mediumGray};
+    background: #FFF;
 
     > ${SectionContainer} {
       padding-top: 0;
@@ -70,6 +71,8 @@ export const Button = styled.button`
     border: none;
     color: ${theme.colors.primaryColor};
     display: none;
+    background: #fff;
+    border-radius: 0.25rem;
     @media ${theme.media.medium} {
       display: flex;
     }

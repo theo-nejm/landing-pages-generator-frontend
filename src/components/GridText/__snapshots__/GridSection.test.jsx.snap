@@ -37,6 +37,17 @@ exports[`<GridText /> should render <GridText /> 1`] = `
   font-size: 2.4rem;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  margin-top: 6rem;
+}
+
 .c2 h2 {
   font-size: 4.2rem;
 }
@@ -72,6 +83,12 @@ exports[`<GridText /> should render <GridText /> 1`] = `
 @media screen and (max-width:768px) {
   .c4 {
     font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .c7 {
+    grid-template-columns: 1fr;
   }
 }
 

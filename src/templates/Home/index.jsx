@@ -1,9 +1,6 @@
-import { Heading } from '../../components/Heading';
+import { Base } from '../Base';
+import { templateMock } from '../Base/mock.jsx';
 
 export default function Home() {
-  return (
-    <div className="Home">
-      <Heading>Hello, world!</Heading>
-    </div>
-  );
+  return <Base {...templateMock} />;
 }

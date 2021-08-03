@@ -22,7 +22,7 @@ exports[`<GoTop /> should match snapshot 1`] = `
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  z-index: 6;
+  z-index: 4;
   opacity: 0.85;
 }
 

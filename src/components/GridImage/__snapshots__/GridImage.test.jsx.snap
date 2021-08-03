@@ -5,6 +5,11 @@ exports[`<GridImage /> should render <GridImage /> w/o background 1`] = `
   font-size: 2.4rem;
 }
 
+.c2 {
+  padding: 4rem 0;
+  width: 80vw;
+}
+
 .c2 h2 {
   font-size: 4.2rem;
 }
@@ -38,7 +43,7 @@ exports[`<GridImage /> should render <GridImage /> w/o background 1`] = `
 .c3 {
   color: #0a1128;
   font-size: 6.4rem;
-  text-transform: none;
+  text-transform: uppercase;
 }
 
 .c1 {
@@ -59,6 +64,12 @@ exports[`<GridImage /> should render <GridImage /> w/o background 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@media screen and (max-width:768px) {
+  .c6 {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -150,6 +161,11 @@ exports[`<GridImage /> should render <GridImage /> with background 1`] = `
   font-size: 2.4rem;
 }
 
+.c2 {
+  padding: 4rem 0;
+  width: 80vw;
+}
+
 .c2 h2 {
   font-size: 4.2rem;
 }
@@ -183,7 +199,7 @@ exports[`<GridImage /> should render <GridImage /> with background 1`] = `
 .c3 {
   color: #0a1128;
   font-size: 6.4rem;
-  text-transform: none;
+  text-transform: uppercase;
 }
 
 .c1 {
@@ -204,6 +220,12 @@ exports[`<GridImage /> should render <GridImage /> with background 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@media screen and (max-width:768px) {
+  .c6 {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width:768px) {

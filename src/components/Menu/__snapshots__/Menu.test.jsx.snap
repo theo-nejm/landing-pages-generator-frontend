@@ -24,6 +24,7 @@ exports[`<Menu /> should match snapshot 1`] = `
   transition: all .2s ease-in-out;
   height: 7rem;
   border-bottom: 1px solid #ddd;
+  background: #FFF;
 }
 
 .c2 > .c3 {
@@ -59,6 +60,8 @@ exports[`<Menu /> should match snapshot 1`] = `
   border: none;
   color: #0a1128;
   display: none;
+  background: #fff;
+  border-radius: 0.25rem;
 }
 
 .c7 {
@@ -295,6 +298,7 @@ exports[`<Menu /> should not render links when no links were passed as props 1`]
   transition: all .2s ease-in-out;
   height: 7rem;
   border-bottom: 1px solid #ddd;
+  background: #FFF;
 }
 
 .c2 > .c3 {
@@ -330,6 +334,8 @@ exports[`<Menu /> should not render links when no links were passed as props 1`]
   border: none;
   color: #0a1128;
   display: none;
+  background: #fff;
+  border-radius: 0.25rem;
 }
 
 .c7 {

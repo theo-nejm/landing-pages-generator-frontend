@@ -8,6 +8,7 @@ exports[`<GridImage /> should render <GridImage /> w/o background 1`] = `
 .c2 {
   padding: 4rem 0;
   width: 80vw;
+  max-width: 100rem;
 }
 
 .c2 h2 {
@@ -164,6 +165,7 @@ exports[`<GridImage /> should render <GridImage /> with background 1`] = `
 .c2 {
   padding: 4rem 0;
   width: 80vw;
+  max-width: 100rem;
 }
 
 .c2 h2 {

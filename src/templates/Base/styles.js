@@ -6,5 +6,9 @@ export const Container = styled.div`
     ${TextContainer} {
       font-size: 2rem;
     }
+
+    & > div:nth-child(1) {
+      padding-top: 7rem;
+    }
   `}
 `;

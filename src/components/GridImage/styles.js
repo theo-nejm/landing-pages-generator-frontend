@@ -5,6 +5,7 @@ export const Container = styled.div`
   ${({ theme }) => css`
     padding: 4rem 0;
     width: 80vw;
+    max-width: 100rem;
 
     h2 {
       font-size: 4.2rem;

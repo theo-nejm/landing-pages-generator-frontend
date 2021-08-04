@@ -1,6 +1,8 @@
+import fakeData from './data.json';
 import {
   mapImageGrid,
   mapSectionContent,
+  mapSections,
   mapSectionTwoColumns,
   mapTextGrid,
 } from './map-sections';
@@ -11,9 +13,27 @@ import {
 } from './mocks/imageGridData';
 import { sectionContentData } from './mocks/sectionContentData';
 import { sectionTwoColumnsData } from './mocks/sectionTwoColumnsData';
-import { textGridData } from './mocks/textGridData';
+import { textGridData, textGridDataWithoutContent } from './mocks/textGridData';
 
 describe('map sections', () => {
+  it('should render predefined section if there isnt data', () => {
+    const data = mapSections();
+    expect(data).toEqual([]);
+  });
+
+  it('should map data if there is data', () => {
+    const data = mapSections(fakeData[0].sections);
+    expect(data[0].component).toBe('section.section-two-columns');
+  });
+
+  it('should map with invalid data', () => {
+    const noDataPast = mapSections([{ __component: 'section.section-grid' }]);
+    const noComponentPast = mapSections([{}]);
+
+    expect(noDataPast).toEqual([{ __component: 'section.section-grid' }]);
+    expect(noComponentPast).toEqual([{}]);
+  });
+
   it('should map section-two-columns without data', () => {
     const data = mapSectionTwoColumns();
     expect(data.background).toBe(false);
@@ -66,32 +86,17 @@ describe('map sections', () => {
     );
     expect(data.background).toBe(true);
     expect(data.sectionId).toBe('grid-one');
-    expect(data.grid).toEqual([
-      {
-        __v: 0,
-        _id: '6102f2fe22a1932f022c0e9e',
-        description:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
-        id: '6102f2fe22a1932f022c0e9e',
-        title: 'Teste 1',
-      },
-      {
-        __v: 0,
-        _id: '6102f2fe22a1932f022c0e9f',
-        description:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
-        id: '6102f2fe22a1932f022c0e9f',
-        title: 'Teste 2',
-      },
-      {
-        __v: 0,
-        _id: '6102f2fe22a1932f022c0ea0',
-        description:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
-        id: '6102f2fe22a1932f022c0ea0',
-        title: 'Teste 3',
-      },
-    ]);
+    expect(data.grid[0].title).toBe('Teste 1');
+    expect(data.grid[0].description).toBe(
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+    );
+  });
+
+  it('should map grid text section without content', () => {
+    const data = mapTextGrid(textGridDataWithoutContent);
+
+    expect(data.grid[0].title).toBe('');
+    expect(data.grid[0].description).toBe('');
   });
 
   it('should map grid text section without data', () => {

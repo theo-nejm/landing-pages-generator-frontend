@@ -1,6 +1,17 @@
-import { mapSectionContent, mapSectionTwoColumns } from './map-sections';
+import {
+  mapImageGrid,
+  mapSectionContent,
+  mapSectionTwoColumns,
+  mapTextGrid,
+} from './map-sections';
+import {
+  imageGridData,
+  imageGridDataWithoutImages,
+  imageGridDataWoUrlAndAltText,
+} from './mocks/imageGridData';
 import { sectionContentData } from './mocks/sectionContentData';
 import { sectionTwoColumnsData } from './mocks/sectionTwoColumnsData';
+import { textGridData } from './mocks/textGridData';
 
 describe('map sections', () => {
   it('should map section-two-columns without data', () => {
@@ -43,5 +54,106 @@ describe('map sections', () => {
     );
     expect(data.background).toBe(false);
     expect(data.sectionId).toBe('intro');
+  });
+
+  it('should map grid text section with content', () => {
+    const data = mapTextGrid(textGridData);
+
+    expect(data.component).toBe('section.section-grid-text');
+    expect(data.title).toBe('My Grid');
+    expect(data.description).toBe(
+      'Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut.',
+    );
+    expect(data.background).toBe(true);
+    expect(data.sectionId).toBe('grid-one');
+    expect(data.grid).toEqual([
+      {
+        __v: 0,
+        _id: '6102f2fe22a1932f022c0e9e',
+        description:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+        id: '6102f2fe22a1932f022c0e9e',
+        title: 'Teste 1',
+      },
+      {
+        __v: 0,
+        _id: '6102f2fe22a1932f022c0e9f',
+        description:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+        id: '6102f2fe22a1932f022c0e9f',
+        title: 'Teste 2',
+      },
+      {
+        __v: 0,
+        _id: '6102f2fe22a1932f022c0ea0',
+        description:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.',
+        id: '6102f2fe22a1932f022c0ea0',
+        title: 'Teste 3',
+      },
+    ]);
+  });
+
+  it('should map grid text section without data', () => {
+    const data = mapTextGrid();
+
+    expect(data.component).toBe('section.section-grid-text');
+    expect(data.title).toBe('');
+    expect(data.description).toBe('');
+    expect(data.background).toBe(false);
+    expect(data.sectionId).toBe('');
+    expect(data.grid).toEqual([]);
+  });
+
+  it('should map grid image section without data', () => {
+    const data = mapImageGrid();
+
+    expect(data.component).toBe('section.section-grid-image');
+    expect(data.title).toBe('');
+    expect(data.description).toBe('');
+    expect(data.background).toBe(false);
+    expect(data.sectionId).toBe('');
+    expect(data.grid).toEqual([]);
+  });
+
+  it('should map grid image section with data', () => {
+    const data = mapImageGrid(imageGridData);
+
+    expect(data.component).toBe('section.section-grid-image');
+    expect(data.title).toBe('gallery');
+    expect(data.description).toBe(
+      'Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde.',
+    );
+    expect(data.background).toBe(false);
+    expect(data.sectionId).toBe('gallery');
+    expect(data.grid[0].altText).toBe('Homem com com os braços cruzados');
+    expect(data.grid[0].srcImg).toBe('image.jpg');
+  });
+
+  it('should map grid image without image infos', () => {
+    const data = mapImageGrid(imageGridDataWoUrlAndAltText);
+
+    expect(data.component).toBe('section.section-grid-image');
+    expect(data.title).toBe('gallery');
+    expect(data.description).toBe(
+      'Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde.',
+    );
+    expect(data.background).toBe(false);
+    expect(data.sectionId).toBe('gallery');
+    expect(data.grid[0].altText).toBe('');
+    expect(data.grid[0].srcImg).toBe('');
+  });
+
+  it('should map grid image without images', () => {
+    const data = mapImageGrid(imageGridDataWithoutImages);
+
+    expect(data.component).toBe('section.section-grid-image');
+    expect(data.title).toBe('gallery');
+    expect(data.description).toBe(
+      'Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde.',
+    );
+    expect(data.background).toBe(false);
+    expect(data.sectionId).toBe('gallery');
+    expect(data.grid[0]).toEqual({ altText: '', srcImg: '' });
   });
 });
